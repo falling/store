@@ -6,8 +6,8 @@ import javax.persistence.*;
  * Created by falling on 2016/5/26.
  */
 @Entity
-@Table(name = "itemtable")
-public class Itemtablebean {
+@Table(name = "itemtable", schema = "store")
+public class Itemtablebean implements Bean {
     private int id;
     private Integer orderId;
     private Integer goodsId;

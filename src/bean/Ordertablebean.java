@@ -7,8 +7,8 @@ import java.util.Date;
  * Created by falling on 2016/5/26.
  */
 @Entity
-@Table(name = "ordertable")
-public class Ordertablebean {
+@Table(name = "ordertable", schema = "store")
+public class Ordertablebean implements Bean {
     private int id;
     private Integer userId;
     private String location;

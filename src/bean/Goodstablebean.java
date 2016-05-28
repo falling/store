@@ -6,8 +6,8 @@ import javax.persistence.*;
  * Created by falling on 2016/5/26.
  */
 @Entity
-@Table(name = "goodstable")
-public class Goodstablebean {
+@Table(name = "goodstable", schema = "store")
+public class Goodstablebean implements Bean {
     private int id;
     private String name;
     private Double price;

@@ -6,13 +6,14 @@ import javax.persistence.*;
  * Created by falling on 2016/5/26.
  */
 @Entity
-@Table(name = "usertable")
-public class Usertablebean {
+@Table(name = "usertable", schema = "store")
+public class Usertablebean implements Bean {
     private int id;
     private String username;
     private String password;
     private String tel;
     private String permission;
+    private String name;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -88,5 +89,15 @@ public class Usertablebean {
         result = 31 * result + (tel != null ? tel.hashCode() : 0);
         result = 31 * result + (permission != null ? permission.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "name", nullable = true, length = 255)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
