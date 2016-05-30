@@ -12,6 +12,7 @@ public class HibernateUtil {
 
 //		SessionFactory sessionFactory = new  Configuration().configure().buildSessionFactory();
 
+
 		Configuration configuration = new Configuration();
     	configuration.configure("hibernate.cfg.xml");
     	System.out.println("Hibernate Configuration loaded");
